@@ -20,7 +20,7 @@ https://jgromes.github.io/RadioLib/
 
 Bitrate of 19200 baud and sync word 0x001a have shown to work fine. Sensors could NOT be activated with trigger tool OEC-T5 EL-50448. Once pressurized they transmit when pressure changes and about once an hour with constant non-zero pressure. Rotation of a bicycle wheel could not trigger transmission.
 
-With RadioLib godmode has been enabled in order to address CC1101 registers directly, since the library does not allow for sync = 0x00.
+With RadioLib godmode has been enabled in order to address CC1101 registers directly, since the library does not allow for sync byte = 0x00.
 
 ## Bluetooth BLE
 Model https://aliexpress.com/item/1005004504977890.html
