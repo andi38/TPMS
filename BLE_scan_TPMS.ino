@@ -82,16 +82,6 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
     if (addr.startsWith("ac:15:85")) {  // my sensors MAC start with ac:15:85
       Serial.print("Payload: "); Serial.print(payloadhex);
 
-// convert hex-payload to array
-      char *pPL = utils.buildHexData(nullptr, (uint8_t*)advertisedDevice.getPayload(), advertisedDevice.getPayloadLength());
-      String sPL = (String) pPL;
-      byte plByte[16];
-      byte plNib[31];
-      sPL.getBytes(plNib,31);
-      for (int i=0; i<30; i=i+2) {
-        plByte[i/2] = convertCharToHex(plNib[i])*16 + convertCharToHex(plNib[i+1]);
-      }
-        
       Serial.print("  ADDR: "); Serial.print(addr.substring(12));
       char *pHex = utils.buildHexData(nullptr, (uint8_t*)advertisedDevice.getManufacturerData().data(), advertisedDevice.getManufacturerData().length());
       Serial.print("  MFG DATA: "); Serial.print(pHex);
