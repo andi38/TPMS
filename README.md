@@ -62,6 +62,6 @@ Status byte SS: ARSB2H1y
 
 Once pressurized they transmit when pressure changes and any couple of minutes. Rotation of a bicycle wheel corresponding to about 4 to 8 km/h speed triggered more frequent transmissions.
 
-Short UUID (16 bit) "0x27a5" (byte 1 to 4), name "BR" (byte 5 to 8), and manufacturer data including checksum (byte 9 to 17) as shown above.
+Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 1 to 4), name "BR" (byte 5 to 8), and manufacturer data including checksum (byte 9 to 17) as shown above.
 
 Sensor data could be received with ESP32 and BLE library.
