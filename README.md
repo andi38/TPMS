@@ -6,7 +6,7 @@ Two pressure sensors (direct external tpms) have been investigated. One model tr
 Model https://aliexpress.com/item/1005004439177734.html
 
 Signals are received with rtl_sdr and SDR dongle as protocol 201 "tpms_truck":
-https://github.com/merbanan/rtl*433/blob/master/src/devices/tpms_truck.c
+https://github.com/merbanan/rtl_433/blob/master/src/devices/tpms_truck.c
 
 Previous work has been anticipated:
 
