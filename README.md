@@ -22,6 +22,8 @@ Bitrate of 19200 baud and sync word 0x001a have shown to work fine. Sensors coul
 
 With RadioLib godmode has been enabled in order to address CC1101 registers directly, since the library does not allow for sync byte = 0x00.
 
+Protocol is described in detail in tpms_truck.c (see above). Example payload is: xxxxxxxx0030f3127e (ID xxxxxxxx, wheel 0, 243 kPa, 18°C).
+
 ## Bluetooth BLE
 Model https://aliexpress.com/item/1005004504977890.html
 
@@ -62,6 +64,6 @@ Status byte SS: ARSB2H1y
 
 Once pressurized they transmit when pressure changes and any couple of minutes. Rotation of a bicycle wheel corresponding to about 4 to 8 km/h speed triggered more frequent transmissions.
 
-Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 1 to 4), name "BR" (byte 5 to 8), and manufacturer data including checksum (byte 9 to 17) as shown above.
+BLE Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 0 to 3, length 3, type 0x03), short name "BR" (byte 4 to 7, length 3, type 0x08), and manufacturer data including checksum (byte 8 to 16, length 8, type 0xff) as shown above. Example payload is: 0303a527 03084252 08ff281d130105a376 (3 AD structures: see Assigned Numbers Document https://www.bluetooth.com/specifications/assigned-numbers/)
 
 Sensor data could be received with ESP32 and BLE library.
