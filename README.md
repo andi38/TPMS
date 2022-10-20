@@ -64,6 +64,6 @@ Status byte SS: ARSB2H1y
 
 Once pressurized they transmit when pressure changes and any couple of minutes. Rotation of a bicycle wheel corresponding to about 4 to 8 km/h speed triggered more frequent transmissions.
 
-BLE Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 0 to 3, length 3, type 0x03), short name "BR" (byte 4 to 7, length 3, type 0x08), and manufacturer data including checksum (byte 8 to 16, length 8, type 0xff) as shown above. Example payload is: 0303a527 03084252 08ff281d130105a376 (3 AD structures: see Assigned Numbers Document https://www.bluetooth.com/specifications/assigned-numbers/)
+BLE Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 0 to 3, length 3, type 0x03), short name "BR" (byte 4 to 7, length 3, type 0x08), and manufacturer data including checksum (byte 8 to 16, length 8, type 0xff) as shown above. Example payload is: 0303a527 03084252 08ff281d130105a376 (2.9 V, 19°C, 11.6 psi, 3 AD structures: see Assigned Numbers Document https://www.bluetooth.com/specifications/assigned-numbers/)
 
 Sensor data could be received with ESP32 and BLE library.
