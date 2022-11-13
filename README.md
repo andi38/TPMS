@@ -46,7 +46,7 @@ With BLE scanner name "BR", service "0x27a5" (pressure psi) and manufacturer dat
 |SS|status|
 |BB|battery 1/10 V|
 |TT|temperature degC|
-|PPPP|pressure 1/10 psi|
+|PPPP|(absolute) pressure 1/10 psi|
 |CCCC|checksum|
 
 Status byte SS: ARSB2H1y
