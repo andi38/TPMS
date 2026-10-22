@@ -39,6 +39,8 @@ https://forum.arduino.cc/t/arduino-ble-tpms-capteur-pression-pneus/592030/60
 
 https://raspberrypi.stackexchange.com/questions/76959/how-to-decode-tpms-sensor-data-through-rpi3-bluetooth
 
+@followedbyrule points to Tesla protocol: https://github.com/andi38/TPMS/issues/11
+
 With BLE scanner name "BR", service "0x27a5" (pressure psi) and manufacturer data have been received as advertising data. The 7 byte manufacturer data seem to contain sensor readings with format SSBBTTPPPPCCCC:
 
 |field|content|
